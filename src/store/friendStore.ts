@@ -1,16 +1,20 @@
 import { create } from 'zustand';
 
-interface Friend {
+export interface Friend {
   id: string;
   username: string;
   consistencyScore: number;
   currentStreak: number;
+  friendCode?: string;
 }
 
-interface FriendRequest {
+export interface FriendRequest {
   id: string;
   senderId: string;
+  receiverId?: string;
+  senderUsername?: string;
   status: string;
+  createdAt?: string;
 }
 
 interface FriendState {
